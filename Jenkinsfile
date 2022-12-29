@@ -16,7 +16,6 @@ pipeline {
                 dir("${env.WORKSPACE}/saleor/k8s-deployments/") {
                     sh 'kubectl apply -f dev-namesapce.yml'
                 }
-                
                 dir("${env.WORKSPACE}/saleor/k8s-deployments/saleor/") {
                     sh 'kubectl apply -f saleor.yml'
                     sh 'kubectl apply -f svc-saleor.yml'
